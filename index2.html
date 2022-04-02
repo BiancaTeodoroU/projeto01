@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style2.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Formulário de Contato</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="icon"
+    href="https://cdn-icons-png.flaticon.com/128/1771/1771385.png">
+</head>
+
+<body>
+
+    <header id="header">
+        <a id="logo" href="">Logo</a>
+        <nav id="nav">                               <!-- indica que esse elemente possui um popup, que quando eu clico nele outro elemento abre-->
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="index4.html">Sobre</a></li>
+            <li><a href="index3.html">Serviços</a></li>
+            <li><a href="index2.html">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    <div class="form-container">
+        <form action="#">
+          <h2>
+            Entrar na lista
+          </h2>
+      
+          <div class="input">
+            <input required type="text" />
+            <label>Nome</label>
+            <span class="error"></span>
+          </div>
+      
+      
+          <div class="input">
+            <input required type="email" />
+            <label>Email</label>
+            <span class="error"></span>
+          </div>
+      
+          <button href="index.html" class="submit">Enviar</button>
+      
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      feather.replace()
+    </script>
+</body>
+</html>

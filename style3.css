@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: white;
+}
+
+.block {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem;
+  height: 20rem;
+}
+
+.text-center {
+  text-align: center! important;
+}
+  
+.mx-auto {
+ margin-left: auto! important;
+}
+  
+.mx-auto {
+  margin-right: auto! important;
+}
+  
+.pb-5 {
+  padding-bottom: 3rem! important;
+}
+   
+.pt-5 {
+  padding-top: 3rem! important;
+}
+  
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+  
+.container {
+ width: 100%;
+ padding-right: 15px;
+ padding-left: 15px;
+ margin-right: auto;
+ margin-left: auto;
+}
+  
+.textura {
+ background-image: url(https://thumbs.dreamstime.com/b/papel-de-parede-fundo-textura-verde-tons-claros-e-escuros-natural-213231922.jpghttps://thumbs.dreamstime.com/b/papel-de-parede-fundo-textura-verde-tons-claros-e-escuros-natural-213231922.jpg);
+ background-size: cover;
+ height: 100%;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+   
+div {
+    display: block;
+}
+
+.corpo p {
+ padding: 30px;
+ width: 960px;
+ margin: auto;
+}
+
+.corpo ul li {
+  padding: 10px;
+  width: 900px;
+  margin: auto;
+}
+
+div {
+  display: block;
+}
+
+h1, h2, h3, h4 {
+text-align: center;
+}
+
+p {
+  margin: 10px auto;
+  width: 400px;
+}
+
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none; /*Serve para tirar o anderline das palavras*/
+  font-family: sans-serif;
+}
+
+a:hover {
+  background: rgba( 0, 0, 0, 0.05);
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;  /* Pra deixar em negrito */
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Alinhando todos os itens ao centro */
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #3cb371;
+  height: 8vh;
+}
+
+#menu {
+  display: flex;  
+  list-style: none; /* Tira a bolinha de estilo de lista */
+  gap: 0.5rem; /* Da um espaçamento entre as palavras */
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+/* Tudo que estiver abaixo de 600px aplicar os estilos que estiverem dentro das chaves */
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  } 
+  #menu {
+    display: block; /* Deixar os itens um em cada linha */
+    position: absolute;
+    width: 50vw;
+    top: 8vh;
+    right: 0px;
+    background: #e7e7e7;
+    transition: 0.6s; /* Faz uma transação de qualquer elemento em 0.6s */
+    z-index: 1000; /* Garante que caso tenha outros elementos abaixo ele fique por cima deles */
+    height: 0px;
+    visibility: hidden; /* Esconde os elemento (itens do menu) */
+    overflow-y: hidden; /* Esconde o elemento na altura, quando não tem um tamanho total */
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible; /* Mostra o elemento */
+    overflow-y: auto; /* Caso o menu seja muito grande com vários itens irá criar uma barra de scroll */
+  }
+  #menu a {
+    padding: 1rem 0; /* Pra que tenha um espaçamento bom entre eles ( opções do menu ) */
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
